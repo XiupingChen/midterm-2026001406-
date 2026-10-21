@@ -127,7 +127,8 @@ Rcpp::List weightedLeastSquares(
 求解加权最小二乘问题：
 
 $$
-\hat\beta=
+\hat{\beta}
+=
 \arg\min_{\beta}
 \sum_{i=1}^{n}w_i(y_i-x_i^\top\beta)^2.
 $$
@@ -135,17 +136,18 @@ $$
 采用行缩放方式完成加权：
 
 $$
-X^*=W^{1/2}X,\qquad
-y^*=W^{1/2}y,
+X_{\mathrm{w}}=W^{1/2}X,
+\qquad
+y_{\mathrm{w}}=W^{1/2}y.
 $$
 
-其中：
+其中，权重矩阵为：
 
 $$
-W=\operatorname{diag}(w_1,\ldots,w_n).
+W=\mathrm{diag}(w_1,\ldots,w_n).
 $$
 
-实现时不显式构造 $n\times n$ 的权重矩阵，而是将设计矩阵的每一行和响应变量的对应元素乘以 $\sqrt{w_i}$。
+实现时不显式构造 $n\times n$ 的权重矩阵，而是将设计矩阵的第 $i$ 行和响应变量的第 $i$ 个元素同时乘以 $\sqrt{w_i}$。
 
 使用 Armadillo 的 `solve()` 求解变换后的最小二乘问题，不显式计算矩阵逆，也不额外添加截距或对数据进行标准化。
 
@@ -281,11 +283,10 @@ C++ 计算结果与 R 的参考结果一致，回归系数、拟合值和加权�
 
 Part A 的四道题均已完成实现，并成功通过题目提供的现有测试。
 
-## 7. AI使用说明
-
-未使用AI。
-
 A1、A2 在 macOS 终端通过 C++11 编译和运行；A3、A4 在 Docker 的 RStudio Server 环境中使用 RcppArmadillo 编译执行。
 
 所有测试结果以实际编译和运行输出为依据。
 
+## 7. AI使用说明
+
+未使用AI。
