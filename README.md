@@ -126,12 +126,7 @@ Rcpp::List weightedLeastSquares(
 
 求解加权最小二乘问题：
 
-$$
-\hat{\beta}
-=
-\arg\min_{\beta}
-\sum_{i=1}^{n}w_i(y_i-x_i^\top\beta)^2.
-$$
+$$\hat{\beta}=\arg\min_{\beta}\sum_{i=1}^{n}w_i(y_i-x_i^\top\beta)^2$$
 
 采用行缩放方式完成加权：
 
