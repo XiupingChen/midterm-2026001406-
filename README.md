@@ -13,8 +13,11 @@ A1、A2 使用 C++11 实现，A3、A4 使用 C++ 与 RcppArmadillo 实现。四�
 
 ## 2. 文件结构
 
+## 2. 文件结构
+
 ```text
-starter-code/
+midterm-2026001406/
+├── README.md
 └── part-a/
     ├── ode-solvers.cpp
     ├── random-normal-vector.cpp
