@@ -281,4 +281,3 @@ Part A 的四道题均已完成实现，并成功通过题目提供的现有测�
 A1、A2 在 macOS 终端通过 C++11 编译和运行；A3、A4 在 Docker 的 RStudio Server 环境中使用 RcppArmadillo 编译执行。
 
 所有测试结果以实际编译和运行输出为依据。
-
