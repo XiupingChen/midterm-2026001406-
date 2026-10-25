@@ -329,10 +329,7 @@ $\sigma=\|Av\|_2,\qquad u=\frac{Av}{\sigma}.$
 
 `sampling-experiment.R` 使用同一幅灰度图像、同一初始向量和 1000 次迭代进行比较。实验选择四个抽样量，每个抽样量独立重复三次。每次重新抽样并构造稀疏矩阵，记录实际非零元素数、矩阵构造时间、幂迭代时间以及符号不变的右奇异向量误差：
 
-$$
-\min\left\{\|\widetilde v-v_{\mathrm{ref}}\|_2,
-\|\widetilde v+v_{\mathrm{ref}}\|_2\right\}.
-$$
+$\min\left\{\|\widetilde v-v_{\mathrm{ref}}\|_2, \|\widetilde v+v_{\mathrm{ref}}\|_2\right\}.$
 
 完整矩阵和稀疏矩阵的 SVD 仅用于验证，不包含在幂迭代计时中。实验保留每次运行的原始结果，并按抽样量计算中位数。
 
