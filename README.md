@@ -26,6 +26,7 @@ A1、A2 使用 C++11；A3、A4 和 B1 使用 RcppArmadillo；B2、B3 使用 Rcpp
 ```text
 midterm-2026001406/
 ├── README.md
+├── report.pdf
 ├── part-a/
 │   ├── ode-solvers.cpp
 │   ├── random-normal-vector.cpp
